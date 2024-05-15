@@ -20,3 +20,46 @@ Create an `index.html` file and add the following code:
 </body>
 </html>
 ```
+
+`styles.css` 
+
+Create a `styles.css` file and add some basic styling:
+```
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+} 
+
+header {
+background-color: #f0f0f0;
+padding: 20px;
+text-align: center;
+} 
+
+main {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+```
+Create a `script.js` file and add some basic functionality:
+```
+// Add products to the page
+const products = [
+{ name: "Product 1", price: 19.99 },
+{ name: "Product 2", price: 9.99 },
+{ name: "Product 3", price: 29.99 }
+]; 
+
+const mainElement = document.querySelector("main"); 
+
+products.forEach((product) => {
+const productElement = document.createElement("div");
+productElement.innerHTML = `
+<h2>${product.name}</h2>
+<p>Price: $${product.price}</p>
+`;
+mainElement.appendChild(productElement);
+});
+```
